@@ -1,18 +1,14 @@
-Dado("que tenha acessado a tela de Login") do                                
-    visit: 'http://automationpractice.com/index.php'
-    @cadastro_page = CadastroPage.new
-    @email_create Faker::Internet.email
-    @first_name Faker::Name.first_name
-    @last_name Faker::Name.last_name
-    @address Faker::Address.street_address
-    @city Faker::Address.city
-    @postcode Faker::Address.postcode
-end            
-
 Quando("clico em CreateAccount após informar um e-mail válido") do           
-@cadastro_page.create_email.set @email_create
-sleep 1
-@cadastro_page.create_account_button.click
+    @cadastro_page = CadastroPage.new
+    @email_create = Faker::Internet.email
+    @first_name = Faker::Name.first_name
+    @last_name = Faker::Name.last_name
+    @address = Faker::Address.street_address
+    @city = Faker::Address.city
+    @postcode = Faker::Address.postcode
+    @cadastro_page.create_email.set @email_create
+    sleep 1
+    @cadastro_page.create_account_button.click
 end                                                                          
                                                                                
 Quando("informo todos os campos obrigatórios") do                            

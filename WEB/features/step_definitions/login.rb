@@ -1,6 +1,6 @@
 Dado("que tenha acessado a tela de Login") do                                
-    pending # Write code here that turns the phrase above into concrete actions
-  end                                                                          
+    visit 'http://automationpractice.com/index.php'
+end
                                                                                
 Dado("informo Email e Senha válidos") do                                     
     pending # Write code here that turns the phrase above into concrete actions
