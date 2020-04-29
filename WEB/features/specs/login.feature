@@ -1,11 +1,23 @@
 # language: pt
 
-Funcionalidade: Efetuando cadastro no AutomationPractice
+Funcionalidade: Variações de Login
 
-@cadastro
-Cenário: Efetuando cadastro e login
+@login_valido
+Cenário: Efetuando login
    Dado que tenha acessado a tela de Login
-   Quando clico em CreateAccount após informar um e-mail válido
-   E informo todos os campos obrigatórios
-   Então clico em Register
-   E meu cadastro é concluido com sucesso
+   E informo Email e Senha válidos
+   Quando clico em Signin
+   Então o login é efetuado com sucesso
+
+@login_em_branco
+Cenário: Login em branco
+   Dado que tenha acessado a tela de Login
+   Quando clico em Signin sem informar email e senha 
+   Então o site retorna uma mensagem de erro requisitando e-mail
+
+@login_invalido
+Cenário: Login invalido
+   Dado que tenha acessado a tela de Login
+   E informo Email e Senha inválidos
+   Quando clico em Signin
+   Então o site retorna uma mensagem de erro de autenticação
