@@ -1,5 +1,5 @@
 Dado("que tenha acessado a tela de Login") do                                
-    visit 'http://automationpractice.com/index.php'
+    visit 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
 end
                                                                                
 Dado("informo Email e Senha válidos") do                                     
