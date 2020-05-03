@@ -1,5 +1,6 @@
 Quando("clico em CreateAccount após informar um e-mail válido") do           
     @cadastro_page = CadastroPage.new
+    @myaccount_page = MyAccountPage.new 
     @email_create = Faker::Internet.email
     @first_name = Faker::Name.first_name
     @last_name = Faker::Name.last_name
@@ -27,5 +28,5 @@ Então("clico em Register") do
 end                                                                          
                                                                                
 Então("meu cadastro é concluido com sucesso") do                             
-    @cadastro_page.home_button.click
+    @myaccount_page.home_button.click
 end                                                                          

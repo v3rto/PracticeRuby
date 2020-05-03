@@ -10,5 +10,4 @@ class CadastroPage < SitePrism::Page
     element :postcode, '#postcode'
     element :mobile_phone, '#phone_mobile'
     element :register_button, '#submitAccount'
-    element :home_button, :css, '#center_column > ul > li > a > span > i'
 end
